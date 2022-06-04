@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,7 +12,124 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+header nav {
+  width: 150px;
+}
+header nav span {
+  padding: 0 5%;
+}
+main {
+  background-color: #1f2127;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+main .sections {
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.sections div {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  max-width: 42.5vw;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.taskHeader {
+  background-color: #eee;
+  border-radius: 16px 16px 0 0;
+  padding: 2.5% 0;
+  color: #000;
+  font-weight: 600;
+}
+.task p {
+  overflow-wrap: break-word;
+  padding: 2.5% 5%;
+}
+.task button {
+  padding: 5px;
+  margin: 5px 5% 5%;
+  background-color: rgb(106, 148, 236);
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+}
+.addTaskBtn {
+  background-color: white;
+  color: black;
+  box-shadow: 2.5px 2.5px 1px #000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 30px;
+  font-weight: 700;
 
+  position: absolute;
+  bottom: 25px;
+  left: 5px;
+}
+.createTaskForm {
+  background-color: #282c34;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 25px;
+  width: 50vw;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  box-shadow: 2px 2px 5px #ddd;
+}
+.createTaskForm textarea {
+  height: 50px;
+  width: 90%;
+  margin: 2.5% 0;
+  resize: none;
+  border-radius: 8px;
+}
+.createTaskForm button {
+  width: 40%;
+  padding: 2%;
+  margin: 2.5% 0 0;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.createTaskForm span {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 24px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
